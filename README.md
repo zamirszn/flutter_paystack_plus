@@ -201,6 +201,7 @@ C. NO SETUP REQUIRED for iOS
 - [onClose] is called when the user cancels a transaction or when there is a failed transaction
 - [onSuccess] is called on successful transactions
 - [callBackURL] is required for Mobile only. Users are redirected to this URL after payment is successful, this helps close the session. The URL is setup in your Dashboard and then provided here.
+- [plan] is for options of making payments to plan subscriptions
 
 ## Usage
 
@@ -208,8 +209,9 @@ C. NO SETUP REQUIRED for iOS
      FlutterPaystackPlus.openPaystackPopup(
       publicKey: '-Your-public-key-',
       customerEmail: 'youremail@gmail.com',
-      context: context,
-      secretKey: '-Your-secret-key-',
+      context:context,
+      secretKey:'-Your-secret-key-',
+      plan:'-Your-plan-configured-from-your-dashboard-',
       amount: (amount * 100).toString(),
       reference: DateTime.now().millisecondsSinceEpoch.toString(),
       callBackUrl: "[GET IT FROM YOUR PAYSTACK DASHBOARD]",
@@ -224,9 +226,11 @@ C. NO SETUP REQUIRED for iOS
 
 ## Contributor(s)
 
-I would like to thank [gikwegbu](https://github.com/gikwegbu) for his valuable contribution to this project.
+I would like to express my appreciation to [Daniel Kabu Asare](https://github.com/popekabu) for his invaluable work on the [pay_with_paystack](https://pub.dev/packages/pay_with_paystack) package, which provided the foundational insights for building the mobile platform of this package.
 
-I also want appreciate [jeremiahseun](https://github.com/jeremiahseun) for his work in making the split payment and subscription functionalities possible.
+I extend my gratitude to [George Ikwegbu Chinedu](https://github.com/gikwegbu) for his significant contributions to this project, particularly for enhancing the subscription functionalities tailored for mobile platforms.
+
+I would like to express my gratitude to [Jeremiah Oluwaseun Erinola](https://github.com/jeremiahseun) for his invaluable contribution, which laid the foundation for implementing the split payment and subscription functionalities.
 
 ## Additional information
 
